@@ -4,11 +4,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#07100b">
+<meta name="theme-color" content="#080b0a">
 
-<title>BM Developers | Digital Development Studio</title>
+<title>VibeSA | The Sound of South Africa</title>
 
-<meta name="description" content="BM Developers creates modern websites, Android applications and innovative digital solutions in South Africa.">
+<meta name="description" content="VibeSA is bringing a new music experience. Discover music, enjoy offline listening and experience South African sounds. Coming February 2, 2027.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,13 +16,13 @@
 
 <style>
 :root {
-  --bg: #07100b;
-  --panel: #101b14;
-  --panel2: #14241a;
+  --bg: #080b0a;
+  --panel: #111815;
+  --panel2: #17231c;
   --green: #35e69a;
-  --green2: #12a96b;
-  --white: #f5fff8;
-  --muted: #9aada1;
+  --green2: #13a96a;
+  --white: #f5fff9;
+  --muted: #9aa9a0;
   --border: rgba(53,230,154,.17);
 }
 
@@ -34,35 +34,34 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 90px;
+  scroll-padding-top: 85px;
 }
 
 body {
   background: var(--bg);
   color: var(--white);
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
   overflow-x: hidden;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 button {
   font-family: inherit;
+  cursor: pointer;
 }
-
-/* BACKGROUND */
 
 .background-glow {
   position: fixed;
-  width: 450px;
-  height: 450px;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
   background: var(--green);
-  filter: blur(180px);
-  opacity: .10;
+  filter: blur(150px);
+  opacity: .09;
   top: 10%;
   right: -200px;
   pointer-events: none;
@@ -70,56 +69,46 @@ button {
 }
 
 .background-glow.two {
-  top: 65%;
+  top: 60%;
   left: -250px;
-  background: #087a49;
-}
-
-#particles {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1;
+  background: #087b4a;
 }
 
 /* NAVIGATION */
 
 nav {
   position: fixed;
-  width: 100%;
-  top: 0;
   z-index: 1000;
+  top: 0;
+  width: 100%;
   padding: 20px 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(7,16,11,.85);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255,255,255,.06);
+  background: rgba(8,11,10,.88);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid #ffffff0c;
 }
 
 .logo {
-  font-size: 21px;
+  font-size: 25px;
   font-weight: 900;
-  letter-spacing: -1px;
+  letter-spacing: -1.5px;
 }
 
 .logo span {
   color: var(--green);
-  text-shadow: 0 0 20px var(--green);
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 28px;
 }
 
 .nav-links a {
+  font-size: 12px;
   color: var(--muted);
-  font-size: 13px;
   transition: .3s;
 }
 
@@ -127,479 +116,648 @@ nav {
   color: var(--green);
 }
 
-.nav-contact {
+.nav-links .launch-link {
+  padding: 11px 16px;
   border: 1px solid var(--green);
-  color: var(--green) !important;
-  padding: 11px 17px;
-  border-radius: 8px;
+  color: var(--green);
+  border-radius: 7px;
 }
 
 .menu-btn {
   display: none;
-  background: none;
   color: white;
-  border: 0;
-  font-size: 27px;
-  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 25px;
 }
 
-/* BUTTONS */
+/* GENERAL */
+
+section {
+  padding: 100px 8%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-heading small {
+  color: var(--green);
+  font-weight: 800;
+  letter-spacing: 3px;
+  font-size: 10px;
+}
+
+.section-heading h2 {
+  font-size: clamp(30px,5vw,48px);
+  margin-top: 15px;
+  letter-spacing: -2px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+  margin-top: 15px;
+}
 
 .btn {
   display: inline-block;
-  padding: 15px 23px;
   border-radius: 9px;
-  font-size: 13px;
-  font-weight: 700;
+  padding: 15px 24px;
+  font-size: 12px;
+  font-weight: 800;
   transition: .3s;
 }
 
 .btn-primary {
   background: var(--green);
   color: #06120b;
-  box-shadow: 0 0 25px rgba(53,230,154,.15);
+  box-shadow: 0 0 30px #35e69a22;
 }
 
 .btn-outline {
-  border: 1px solid rgba(255,255,255,.2);
+  border: 1px solid #ffffff35;
   color: white;
 }
 
 .btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 35px rgba(53,230,154,.2);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px #35e69a25;
 }
 
 /* HERO */
 
 .hero {
   min-height: 100vh;
-  padding: 150px 8% 90px;
+  padding: 150px 8% 80px;
   display: grid;
-  grid-template-columns: 1.1fr .9fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 50px;
+  gap: 35px;
+  position: relative;
 }
 
-.tag {
-  display: inline-block;
-  padding: 10px 16px;
-  border: 1px solid var(--border);
-  border-radius: 30px;
-  background: rgba(53,230,154,.06);
+.hero-content {
+  z-index: 2;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
   color: var(--green);
-  font-size: 11px;
-  font-weight: 700;
+  background: #35e69a0c;
+  border: 1px solid var(--border);
+  padding: 10px 15px;
+  border-radius: 30px;
+  font-size: 10px;
+  font-weight: 800;
   letter-spacing: 1px;
-  margin-bottom: 28px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--green);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--green);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  50% { opacity: .3; }
 }
 
 .hero h1 {
-  font-size: clamp(45px,6.5vw,82px);
-  line-height: 1.06;
-  font-weight: 900;
+  font-size: clamp(48px,7vw,85px);
+  line-height: 1.03;
   letter-spacing: -5px;
+  font-weight: 900;
+  margin-top: 30px;
 }
 
 .hero h1 span {
   color: var(--green);
-  text-shadow: 0 0 35px rgba(53,230,154,.35);
+  text-shadow: 0 0 35px #35e69a35;
 }
 
-.hero p {
-  max-width: 500px;
-  margin: 26px 0 32px;
-  font-size: 15px;
-  line-height: 1.9;
+.hero-description {
+  max-width: 480px;
   color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 25px 0 30px;
 }
 
 .hero-buttons {
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.hero-small {
-  margin-top: 40px;
-  display: flex;
-  gap: 30px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
-.hero-small div {
-  border-left: 2px solid var(--green);
-  padding-left: 12px;
-}
-
-.hero-small strong {
-  display: block;
-  font-size: 14px;
-}
-
-.hero-small small {
-  display: block;
+.hero-label {
   color: var(--muted);
   font-size: 10px;
-  margin-top: 5px;
+  margin-top: 35px;
+  letter-spacing: 2px;
 }
 
-/* 3D SCENE */
+/* HERO MUSIC ART */
 
-.scene {
-  perspective: 1200px;
-  min-height: 430px;
+.music-scene {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 440px;
   position: relative;
+  perspective: 900px;
 }
 
-.cube-container {
-  width: 220px;
-  height: 220px;
-  position: relative;
-  transform-style: preserve-3d;
-  animation: cubeRotate 18s linear infinite;
-}
-
-.cube-face {
-  position: absolute;
-  width: 220px;
-  height: 220px;
-  border: 2px solid rgba(53,230,154,.8);
-  background: linear-gradient(145deg,
-    rgba(53,230,154,.20),
-    rgba(10,28,18,.85));
-  box-shadow:
-    inset 0 0 50px rgba(53,230,154,.12),
-    0 0 35px rgba(53,230,154,.12);
-  backdrop-filter: blur(8px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--green);
-  font-size: 55px;
-  font-weight: 900;
-}
-
-.face-front { transform: translateZ(110px); }
-.face-back { transform: rotateY(180deg) translateZ(110px); }
-.face-right { transform: rotateY(90deg) translateZ(110px); }
-.face-left { transform: rotateY(-90deg) translateZ(110px); }
-.face-top { transform: rotateX(90deg) translateZ(110px); }
-.face-bottom { transform: rotateX(-90deg) translateZ(110px); }
-
-@keyframes cubeRotate {
-  0% { transform: rotateX(-20deg) rotateY(0deg); }
-  100% { transform: rotateX(340deg) rotateY(360deg); }
-}
-
-.orbit {
-  position: absolute;
-  width: 330px;
-  height: 330px;
-  border: 1px solid rgba(53,230,154,.25);
+.music-disc {
+  width: 290px;
+  height: 290px;
   border-radius: 50%;
-  transform: rotateX(70deg) rotateY(-15deg);
-  animation: orbit 9s linear infinite;
+  background:
+    repeating-radial-gradient(
+      circle,
+      #151b17 0px,
+      #26352b 2px,
+      #101512 5px,
+      #202d24 8px
+    );
+  border: 2px solid #35e69a55;
+  box-shadow:
+    0 0 45px #35e69a22,
+    inset 0 0 35px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: discRotate 16s linear infinite;
 }
 
-.orbit.two {
-  width: 390px;
-  height: 390px;
-  transform: rotateX(70deg) rotateY(40deg);
-  animation-direction: reverse;
+.disc-center {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#35e69a,#087a49);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #06120b;
+  font-size: 29px;
+  font-weight: 900;
+  box-shadow: 0 0 40px #35e69a55;
 }
 
-@keyframes orbit {
-  to { rotate: 0 0 1 360deg; }
+@keyframes discRotate {
+  to { transform: rotate(360deg); }
 }
 
-.float-card {
+.sound-ring {
   position: absolute;
-  padding: 15px 19px;
-  background: #14241a;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  color: var(--green);
-  font-size: 11px;
-  font-weight: 700;
-  box-shadow: 0 15px 45px #0008;
-  animation: float 4s ease-in-out infinite;
-  z-index: 3;
+  width: 370px;
+  height: 370px;
+  border: 1px solid #35e69a35;
+  border-radius: 50%;
+  animation: ringPulse 3s ease-in-out infinite;
 }
 
-.float-one {
-  top: 10%;
-  right: 0;
-}
-
-.float-two {
-  bottom: 9%;
-  left: 0;
+.sound-ring.two {
+  width: 430px;
+  height: 430px;
   animation-delay: 1.5s;
 }
 
-@keyframes float {
-  50% { transform: translateY(-16px); }
+@keyframes ringPulse {
+  50% {
+    transform: scale(1.05);
+    opacity: .25;
+  }
 }
 
-/* GENERAL SECTIONS */
-
-section {
-  padding: 105px 8%;
-}
-
-.section-heading {
-  text-align: center;
-  margin-bottom: 55px;
-}
-
-.section-heading small {
-  color: var(--green);
-  letter-spacing: 3px;
+.floating-label {
+  position: absolute;
+  padding: 13px 17px;
+  background: #15221a;
+  border: 1px solid var(--border);
+  border-radius: 10px;
   font-size: 11px;
+  color: var(--green);
+  font-weight: 700;
+  animation: floating 4s ease-in-out infinite;
+}
+
+.label-one {
+  top: 12%;
+  right: 0;
+}
+
+.label-two {
+  bottom: 12%;
+  left: 0;
+  animation-delay: 1s;
+}
+
+@keyframes floating {
+  50% { transform: translateY(-13px); }
+}
+
+/* SOUND WAVE */
+
+.wave {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 25px;
+}
+
+.wave span {
+  width: 4px;
+  border-radius: 10px;
+  background: var(--green);
+  animation: waveMove 1s ease-in-out infinite alternate;
+}
+
+.wave span:nth-child(1) { height: 10px; }
+.wave span:nth-child(2) { height: 20px; animation-delay: .1s; }
+.wave span:nth-child(3) { height: 30px; animation-delay: .2s; }
+.wave span:nth-child(4) { height: 17px; animation-delay: .3s; }
+.wave span:nth-child(5) { height: 27px; animation-delay: .4s; }
+.wave span:nth-child(6) { height: 12px; animation-delay: .5s; }
+.wave span:nth-child(7) { height: 24px; animation-delay: .6s; }
+.wave span:nth-child(8) { height: 15px; animation-delay: .7s; }
+
+@keyframes waveMove {
+  to { transform: scaleY(.35); }
+}
+
+/* FEATURES */
+
+.features {
+  background: linear-gradient(180deg,#0b110d,#0e1711);
+  border-top: 1px solid #ffffff0a;
+  border-bottom: 1px solid #ffffff0a;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.feature-card {
+  background: linear-gradient(145deg,#17241c,#0d1510);
+  border: 1px solid #ffffff10;
+  border-radius: 15px;
+  padding: 28px;
+  min-height: 215px;
+  transition: .3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--green);
+  box-shadow: 0 15px 40px #0007;
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  background: #35e69a12;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 23px;
+  margin-bottom: 22px;
+}
+
+.feature-card h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* MUSIC EXPERIENCE */
+
+.experience {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.experience-text h2 {
+  font-size: clamp(32px,5vw,49px);
+  line-height: 1.15;
+  letter-spacing: -2px;
+}
+
+.experience-text h2 span {
+  color: var(--green);
+}
+
+.experience-text p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 2;
+  margin: 20px 0;
+}
+
+.experience-list {
+  display: grid;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.experience-item {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  color: #dce9e0;
+  font-size: 12px;
+}
+
+.check {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #35e69a16;
+  color: var(--green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PLAYER MOCKUP */
+
+.player-mockup {
+  background: linear-gradient(150deg,#19271e,#0c130f);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 25px;
+  max-width: 380px;
+  width: 100%;
+  margin: auto;
+  box-shadow: 0 25px 70px #0008;
+}
+
+.player-top {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.album-art {
+  margin: 25px auto;
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 1;
+  border-radius: 17px;
+  background:
+    radial-gradient(circle at 65% 30%,#35e69a55,transparent 35%),
+    linear-gradient(145deg,#1a4a30,#08140d 65%,#35e69a);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 35px #0007;
+}
+
+.album-art strong {
+  font-size: 42px;
+  letter-spacing: -3px;
+}
+
+.album-art small {
+  font-size: 9px;
+  color: #c9ffe0;
+  letter-spacing: 4px;
+}
+
+.track-name {
+  font-size: 19px;
   font-weight: 800;
 }
 
-.section-heading h2 {
-  font-size: clamp(30px,4vw,46px);
-  letter-spacing: -2px;
-  margin-top: 16px;
-}
-
-.section-heading p {
+.track-artist {
   color: var(--muted);
-  margin-top: 15px;
-  font-size: 14px;
-  line-height: 1.8;
+  font-size: 11px;
+  margin-top: 7px;
 }
 
-/* SERVICES */
-
-.services {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 22px;
-  perspective: 1000px;
-}
-
-.service-card {
-  position: relative;
-  min-height: 235px;
-  padding: 30px;
-  background: linear-gradient(145deg,#15251b,#0c1510);
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 16px;
-  transform-style: preserve-3d;
-  transition: border-color .3s, box-shadow .3s;
+.progress {
+  height: 4px;
+  border-radius: 5px;
+  background: #ffffff22;
+  margin-top: 25px;
   overflow: hidden;
 }
 
-.service-card::after {
-  content: "";
-  position: absolute;
-  width: 150px;
-  height: 150px;
+.progress span {
+  display: block;
+  height: 100%;
+  width: 45%;
   background: var(--green);
-  opacity: .05;
-  filter: blur(65px);
-  right: -40px;
-  bottom: -40px;
 }
 
-.service-card:hover {
-  border-color: var(--green);
-  box-shadow: 0 20px 50px #0008;
-}
-
-.service-icon {
-  font-size: 32px;
-  margin-bottom: 24px;
-  transform: translateZ(30px);
-}
-
-.service-card h3 {
-  font-size: 17px;
-  margin-bottom: 13px;
-  transform: translateZ(20px);
-}
-
-.service-card p {
+.track-times {
+  display: flex;
+  justify-content: space-between;
   color: var(--muted);
-  font-size: 13px;
-  line-height: 1.8;
-  transform: translateZ(15px);
+  font-size: 9px;
+  margin-top: 9px;
 }
 
-/* ABOUT */
+.player-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 24px;
+  color: white;
+  font-size: 22px;
+}
 
-.about {
-  background: linear-gradient(120deg,#0d1c13,#09110c);
+.play-button {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #06120b;
+  background: var(--green);
+  font-size: 20px;
+}
+
+/* SOUTH AFRICA */
+
+.sa-section {
+  background: linear-gradient(130deg,#101d14,#08100b);
+  text-align: center;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
 
-.about-inner {
-  max-width: 850px;
-  margin: auto;
-  text-align: center;
+.sa-section h2 {
+  font-size: clamp(32px,5vw,55px);
+  letter-spacing: -2px;
+  margin: 18px 0;
 }
 
-.about-inner h2 {
-  font-size: clamp(33px,5vw,48px);
-  margin: 20px 0;
-}
-
-.about-inner h2 span {
+.sa-section h2 span {
   color: var(--green);
 }
 
-.about-inner p {
+.sa-section p {
+  max-width: 620px;
+  margin: auto;
   color: var(--muted);
   line-height: 2;
-  font-size: 14px;
+  font-size: 13px;
 }
 
-.about-pill {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 12px 20px;
-  border: 1px solid var(--border);
-  color: var(--green);
-  border-radius: 30px;
-  font-size: 12px;
-}
+/* COUNTDOWN */
 
-/* PROJECTS */
-
-.projects {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 22px;
-}
-
-.project {
-  padding: 32px;
-  border-radius: 16px;
-  background: linear-gradient(145deg,#14221a,#0b140f);
-  border: 1px solid rgba(255,255,255,.08);
-  transition: .3s;
+.countdown-section {
+  min-height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at center,#123723 0%,#0b1710 35%,#080b0a 75%);
   position: relative;
   overflow: hidden;
 }
 
-.project:hover {
-  transform: translateY(-8px);
-  border-color: var(--green);
+.countdown-inner {
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  z-index: 2;
 }
 
-.project-number {
+.countdown-label {
+  color: var(--green);
+  letter-spacing: 4px;
+  font-weight: 900;
   font-size: 11px;
+}
+
+.countdown-section h2 {
+  font-size: clamp(38px,7vw,75px);
+  letter-spacing: -4px;
+  line-height: 1.1;
+  margin: 22px 0 15px;
+}
+
+.countdown-section h2 span {
   color: var(--green);
-  font-weight: 800;
-  letter-spacing: 2px;
-  margin-bottom: 24px;
+  text-shadow: 0 0 35px #35e69a45;
 }
 
-.project h3 {
-  font-size: 22px;
-  margin-bottom: 13px;
-}
-
-.project p {
-  font-size: 13px;
+.countdown-subtitle {
   color: var(--muted);
-  line-height: 1.9;
+  font-size: 13px;
+  margin-bottom: 40px;
 }
 
-.project-type {
-  display: inline-block;
-  margin-top: 22px;
-  font-size: 10px;
-  color: var(--green);
-  background: rgba(53,230,154,.08);
-  padding: 8px 12px;
-  border-radius: 20px;
-}
-
-/* PROCESS */
-
-.process {
-  background: #0c1710;
-}
-
-.process-grid {
+.countdown {
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  gap: 18px;
+  gap: 15px;
+  max-width: 700px;
+  margin: auto;
 }
 
-.process-card {
-  padding: 25px;
-  border: 1px solid var(--border);
-  border-radius: 13px;
-  background: #101b14;
+.time-box {
+  background: rgba(19,35,25,.8);
+  border: 1px solid #35e69a45;
+  border-radius: 15px;
+  padding: 25px 10px;
+  box-shadow: 0 0 30px #35e69a0c;
 }
 
-.process-card strong {
-  font-size: 30px;
+.time-number {
+  font-size: clamp(32px,6vw,58px);
+  font-weight: 900;
   color: var(--green);
-}
-
-.process-card h3 {
-  font-size: 15px;
-  margin: 15px 0 10px;
-}
-
-.process-card p {
-  font-size: 12px;
-  line-height: 1.8;
-  color: var(--muted);
-}
-
-/* CONTACT */
-
-.contact {
-  text-align: center;
-  background: radial-gradient(ellipse at center,
-    #153c29 0%,#07100b 70%);
-}
-
-.contact h2 {
-  font-size: clamp(34px,5vw,58px);
-  line-height: 1.2;
   letter-spacing: -2px;
-  margin: 22px 0;
+  font-variant-numeric: tabular-nums;
 }
 
-.contact h2 span {
+.time-label {
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+
+.launch-date {
+  margin-top: 35px;
+  font-size: 12px;
+  color: #c4d5c9;
+  letter-spacing: 2px;
+}
+
+.launch-date span {
   color: var(--green);
 }
 
-.contact p {
-  max-width: 500px;
-  margin: 0 auto 30px;
-  line-height: 1.9;
-  color: var(--muted);
+.countdown-message {
+  margin-top: 25px;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--green);
 }
 
-.contact-details {
-  margin-top: 28px;
-  font-size: 12px;
+/* FINAL CTA */
+
+.final-cta {
+  text-align: center;
+  padding: 90px 8%;
+}
+
+.final-cta h2 {
+  font-size: clamp(32px,5vw,48px);
+  margin: 18px 0;
+}
+
+.final-cta h2 span {
+  color: var(--green);
+}
+
+.final-cta p {
   color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+  margin-bottom: 27px;
 }
 
 /* FOOTER */
 
 footer {
-  padding: 35px 8%;
-  border-top: 1px solid rgba(255,255,255,.07);
+  padding: 30px 8%;
   display: flex;
   justify-content: space-between;
-  gap: 20px;
   flex-wrap: wrap;
+  gap: 15px;
+  border-top: 1px solid #ffffff10;
   color: var(--muted);
   font-size: 11px;
 }
@@ -608,12 +766,12 @@ footer span {
   color: var(--green);
 }
 
-/* REVEAL ANIMATION */
+/* REVEAL */
 
 .reveal {
   opacity: 0;
-  transform: translateY(35px);
-  transition: opacity .8s ease, transform .8s ease;
+  transform: translateY(25px);
+  transition: opacity .7s ease, transform .7s ease;
 }
 
 .reveal.visible {
@@ -621,11 +779,11 @@ footer span {
   transform: translateY(0);
 }
 
-/* MOBILE */
+/* MOBILE PERFORMANCE */
 
 @media(max-width:850px) {
   nav {
-    padding: 19px 6%;
+    padding: 18px 6%;
   }
 
   .menu-btn {
@@ -635,13 +793,13 @@ footer span {
   .nav-links {
     display: none;
     position: absolute;
-    top: 70px;
+    top: 68px;
     left: 0;
     width: 100%;
+    background: #101a14;
     padding: 25px;
     flex-direction: column;
-    background: #101b14;
-    gap: 25px;
+    gap: 24px;
   }
 
   .nav-links.open {
@@ -651,10 +809,10 @@ footer span {
   .hero {
     grid-template-columns: 1fr;
     text-align: center;
-    padding: 140px 7% 70px;
+    padding: 140px 7% 65px;
   }
 
-  .hero p {
+  .hero-description {
     margin-left: auto;
     margin-right: auto;
   }
@@ -663,66 +821,74 @@ footer span {
     justify-content: center;
   }
 
-  .hero-small {
-    justify-content: center;
+  .music-scene {
+    min-height: 380px;
   }
 
-  .scene {
-    min-height: 390px;
+  .music-disc {
+    width: 230px;
+    height: 230px;
   }
 
-  .cube-container {
-    transform: scale(.78);
+  .disc-center {
+    width: 85px;
+    height: 85px;
+    font-size: 24px;
   }
 
-  .services {
+  .sound-ring {
+    width: 290px;
+    height: 290px;
+  }
+
+  .sound-ring.two {
+    width: 340px;
+    height: 340px;
+  }
+
+  .feature-grid {
     grid-template-columns: 1fr 1fr;
   }
 
-  .process-grid {
-    grid-template-columns: 1fr 1fr;
+  .experience {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   section {
-    padding: 80px 7%;
+    padding: 75px 7%;
   }
 }
 
-@media(max-width:550px) {
+@media(max-width:500px) {
   .hero h1 {
     letter-spacing: -3px;
   }
 
-  .services,
-  .projects,
-  .process-grid {
+  .feature-grid {
     grid-template-columns: 1fr;
   }
 
-  .scene {
-    min-height: 340px;
+  .countdown {
+    gap: 8px;
   }
 
-  .cube-container {
-    transform: scale(.65);
+  .time-box {
+    padding: 18px 5px;
   }
 
-  .orbit {
-    width: 260px;
-    height: 260px;
+  .time-label {
+    font-size: 8px;
+    letter-spacing: 1px;
   }
 
-  .orbit.two {
-    width: 310px;
-    height: 310px;
+  .countdown-section h2 {
+    letter-spacing: -2px;
   }
 
-  .float-one {
-    right: -5px;
-  }
-
-  .float-two {
-    left: -5px;
+  .floating-label {
+    font-size: 9px;
+    padding: 10px;
   }
 
   footer {
@@ -731,14 +897,11 @@ footer span {
   }
 }
 
-/* ACCESSIBILITY */
-
 @media(prefers-reduced-motion: reduce) {
   *, *::before, *::after {
-    animation-duration: .01ms !important;
-    animation-iteration-count: 1 !important;
+    animation: none !important;
     scroll-behavior: auto !important;
-    transition-duration: .01ms !important;
+    transition: none !important;
   }
 
   .reveal {
@@ -754,21 +917,18 @@ footer span {
 <div class="background-glow"></div>
 <div class="background-glow two"></div>
 
-<canvas id="particles"></canvas>
-
 <!-- NAVIGATION -->
 
 <nav>
-  <a href="#home" class="logo">BM<span>.</span> DEVELOPERS</a>
+  <a href="#home" class="logo">Vibe<span>SA.</span></a>
 
-  <button class="menu-btn" onclick="toggleMenu()" aria-label="Open navigation">☰</button>
+  <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
 
   <div class="nav-links" id="navLinks">
     <a href="#home" onclick="closeMenu()">Home</a>
-    <a href="#services" onclick="closeMenu()">Services</a>
-    <a href="#about" onclick="closeMenu()">About</a>
-    <a href="#projects" onclick="closeMenu()">Projects</a>
-    <a href="#contact" class="nav-contact" onclick="closeMenu()">Let's Talk ↗</a>
+    <a href="#features" onclick="closeMenu()">Features</a>
+    <a href="#experience" onclick="closeMenu()">Experience</a>
+    <a href="#launch" class="launch-link" onclick="closeMenu()">Launch Countdown</a>
   </div>
 </nav>
 
@@ -778,300 +938,344 @@ footer span {
 
   <div class="hero-content reveal">
 
-    <div class="tag">✦ INDEPENDENT DIGITAL DEVELOPMENT STUDIO</div>
+    <div class="status">
+      <span class="status-dot"></span>
+      SOMETHING BIG IS COMING
+    </div>
 
     <h1>
-      We Build<br>
-      <span>Digital Futures.</span>
+      Feel the<br>
+      <span>Sound.</span><br>
+      Live the Vibe.
     </h1>
 
-    <p>
-      BM Developers transforms ideas into digital experiences.
-      We create modern websites, Android applications and
-      innovative software solutions for businesses and brands.
+    <p class="hero-description">
+      A new music experience is on its way.
+      Discover your favourite sounds, explore music
+      and experience the rhythm of South Africa.
     </p>
 
     <div class="hero-buttons">
-      <a href="#projects" class="btn btn-primary">Explore Our Work ↗</a>
-      <a href="#contact" class="btn btn-outline">Start a Project</a>
+      <a href="#features" class="btn btn-primary">Explore VibeSA ↗</a>
+      <a href="#launch" class="btn btn-outline">See Launch Date</a>
     </div>
 
-    <div class="hero-small">
-      <div>
-        <strong>Websites</strong>
-        <small>Modern web experiences</small>
-      </div>
-
-      <div>
-        <strong>Applications</strong>
-        <small>Mobile solutions</small>
-      </div>
-
-      <div>
-        <strong>Innovation</strong>
-        <small>Digital possibilities</small>
-      </div>
+    <div class="hero-label">
+      BUILT FOR MUSIC LOVERS · SOUTH AFRICA 🇿🇦
     </div>
 
   </div>
 
-  <!-- 3D LOGO -->
+  <div class="music-scene reveal">
 
-  <div class="scene reveal">
+    <div class="sound-ring"></div>
+    <div class="sound-ring two"></div>
 
-    <div class="orbit"></div>
-    <div class="orbit two"></div>
-
-    <div class="cube-container">
-
-      <div class="cube-face face-front">BM</div>
-      <div class="cube-face face-back">&lt;/&gt;</div>
-      <div class="cube-face face-right">01</div>
-      <div class="cube-face face-left">DEV</div>
-      <div class="cube-face face-top">✦</div>
-      <div class="cube-face face-bottom">{ }</div>
-
+    <div class="music-disc">
+      <div class="disc-center">VSA</div>
     </div>
 
-    <div class="float-card float-one">✦ Creative Development</div>
-    <div class="float-card float-two">⌘ Building Digital Solutions</div>
+    <div class="floating-label label-one">♫ YOUR MUSIC. YOUR VIBE.</div>
+    <div class="floating-label label-two">✦ COMING SOON · 2027</div>
 
   </div>
 
 </header>
 
-<!-- SERVICES -->
+<!-- FEATURES -->
 
-<section id="services">
-
-  <div class="section-heading reveal">
-    <small>WHAT WE DO</small>
-    <h2>Our Development Services</h2>
-    <p>Technology, creativity and innovation working together.</p>
-  </div>
-
-  <div class="services">
-
-    <div class="service-card reveal">
-      <div class="service-icon">🌐</div>
-      <h3>Website Development</h3>
-      <p>Responsive and modern websites for businesses, brands and individuals.</p>
-    </div>
-
-    <div class="service-card reveal">
-      <div class="service-icon">📱</div>
-      <h3>Android Applications</h3>
-      <p>Custom Android application concepts and mobile experiences.</p>
-    </div>
-
-    <div class="service-card reveal">
-      <div class="service-icon">🎨</div>
-      <h3>UI/UX Design</h3>
-      <p>Beautiful interfaces designed to make digital products easy to use.</p>
-    </div>
-
-    <div class="service-card reveal">
-      <div class="service-icon">⚙️</div>
-      <h3>Custom Software</h3>
-      <p>Software concepts and digital tools designed around specific needs.</p>
-    </div>
-
-    <div class="service-card reveal">
-      <div class="service-icon">🤖</div>
-      <h3>AI Solutions</h3>
-      <p>Exploring AI-powered applications and intelligent digital experiences.</p>
-    </div>
-
-    <div class="service-card reveal">
-      <div class="service-icon">🚀</div>
-      <h3>Business Solutions</h3>
-      <p>Digital platforms that help businesses establish their online presence.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ABOUT -->
-
-<section class="about" id="about">
-
-  <div class="about-inner reveal">
-
-    <small style="color:var(--green);letter-spacing:3px;font-weight:800">
-      THE VISION
-    </small>
-
-    <h2>Meet <span>Blessing Masedi.</span></h2>
-
-    <p>
-      BM Developers is an independent development brand founded
-      around a passion for technology, software engineering and
-      entrepreneurship.
-
-      Based in Limpopo, South Africa, our vision is to transform
-      creative ideas into useful digital products.
-
-      We believe great technology starts with a simple idea
-      and the determination to build it.
-    </p>
-
-    <div class="about-pill">
-      INNOVATION · TECHNOLOGY · CREATIVITY
-    </div>
-
-  </div>
-
-</section>
-
-<!-- PROJECTS -->
-
-<section id="projects">
+<section class="features" id="features">
 
   <div class="section-heading reveal">
-    <small>OUR PORTFOLIO</small>
-    <h2>Selected Projects</h2>
-    <p>Explore our development journey and product concepts.</p>
+    <small>THE VIBESA EXPERIENCE</small>
+    <h2>More Than Just Music.</h2>
+    <p>Discover the features planned for the VibeSA music experience.</p>
   </div>
 
-  <div class="projects">
+  <div class="feature-grid">
 
-    <div class="project reveal">
-      <div class="project-number">PROJECT 01 / FOOD TECH</div>
-      <h3>FH Eats</h3>
-      <p>
-        A food business digital platform concept focused on
-        showcasing food and delivering a modern customer experience.
-      </p>
-      <div class="project-type">Business Platform</div>
+    <div class="feature-card reveal">
+      <div class="feature-icon">🎵</div>
+      <h3>Music Streaming</h3>
+      <p>Enjoy a music listening experience with your favourite tracks and artists.</p>
     </div>
 
-    <div class="project reveal">
-      <div class="project-number">PROJECT 02 / MUSIC TECH</div>
-      <h3>VibeSA</h3>
-      <p>
-        A South African music application concept focused on
-        music discovery and local listening experiences.
-      </p>
-      <div class="project-type">Android Application</div>
+    <div class="feature-card reveal">
+      <div class="feature-icon">📥</div>
+      <h3>Offline Listening</h3>
+      <p>Access supported music stored on your device without needing an internet connection.</p>
     </div>
 
-    <div class="project reveal">
-      <div class="project-number">PROJECT 03 / MARKETPLACE</div>
-      <h3>HustleLink</h3>
-      <p>
-        A digital marketplace concept connecting independent
-        freelancers with potential customers.
-      </p>
-      <div class="project-type">Digital Marketplace</div>
+    <div class="feature-card reveal">
+      <div class="feature-icon">🎨</div>
+      <h3>Beautiful Artwork</h3>
+      <p>Experience music with album covers, artwork and an elegant now-playing screen.</p>
     </div>
 
-    <div class="project reveal">
-      <div class="project-number">PROJECT 04 / FINTECH</div>
-      <h3>FH Coin</h3>
-      <p>
-        A financial technology learning project exploring
-        digital accounts and transaction interfaces.
-      </p>
-      <div class="project-type">Fintech Concept</div>
+    <div class="feature-card reveal">
+      <div class="feature-icon">📂</div>
+      <h3>Music Library</h3>
+      <p>Browse and organise audio files available on your Android device.</p>
     </div>
 
-  </div>
-
-</section>
-
-<!-- DEVELOPMENT PROCESS -->
-
-<section class="process">
-
-  <div class="section-heading reveal">
-    <small>HOW WE WORK</small>
-    <h2>From Idea to Reality</h2>
-    <p>A simple approach to building digital products.</p>
-  </div>
-
-  <div class="process-grid">
-
-    <div class="process-card reveal">
-      <strong>01</strong>
-      <h3>Discovery</h3>
-      <p>Understand your idea, goals and requirements.</p>
+    <div class="feature-card reveal">
+      <div class="feature-icon">💚</div>
+      <h3>Personal Playlists</h3>
+      <p>Organise your favourite songs and create your own listening collections.</p>
     </div>
 
-    <div class="process-card reveal">
-      <strong>02</strong>
-      <h3>Design</h3>
-      <p>Plan the structure and visual experience.</p>
+    <div class="feature-card reveal">
+      <div class="feature-icon">⏯️</div>
+      <h3>Background Playback</h3>
+      <p>Listen while using other apps, with convenient playback controls.</p>
     </div>
 
-    <div class="process-card reveal">
-      <strong>03</strong>
-      <h3>Development</h3>
-      <p>Build and test the digital solution.</p>
+    <div class="feature-card reveal">
+      <div class="feature-icon">🔍</div>
+      <h3>Music Discovery</h3>
+      <p>Explore music and find new sounds through an organised music experience.</p>
     </div>
 
-    <div class="process-card reveal">
-      <strong>04</strong>
-      <h3>Launch</h3>
-      <p>Prepare the finished project for release.</p>
+    <div class="feature-card reveal">
+      <div class="feature-icon">🎧</div>
+      <h3>Premium Player</h3>
+      <p>A modern music player with playback controls and track information.</p>
+    </div>
+
+    <div class="feature-card reveal">
+      <div class="feature-icon">🇿🇦</div>
+      <h3>South African Sounds</h3>
+      <p>Celebrate local music, independent artists and South African musical culture.</p>
     </div>
 
   </div>
 
 </section>
 
-<!-- CONTACT -->
+<!-- PLAYER EXPERIENCE -->
 
-<section class="contact" id="contact">
+<section id="experience">
+
+  <div class="experience">
+
+    <div class="experience-text reveal">
+
+      <small style="color:var(--green);letter-spacing:3px;font-weight:800">
+        THE PLAYER EXPERIENCE
+      </small>
+
+      <h2>
+        Every track.<br>
+        Every beat.<br>
+        <span>Your experience.</span>
+      </h2>
+
+      <p>
+        VibeSA is being designed around a clean and modern
+        music listening experience, with music artwork,
+        track information and convenient controls.
+      </p>
+
+      <div class="experience-list">
+
+        <div class="experience-item">
+          <span class="check">✓</span>
+          Music artwork and track details
+        </div>
+
+        <div class="experience-item">
+          <span class="check">✓</span>
+          Next and previous track controls
+        </div>
+
+        <div class="experience-item">
+          <span class="check">✓</span>
+          Music library organisation
+        </div>
+
+        <div class="experience-item">
+          <span class="check">✓</span>
+          Dark premium interface
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ILLUSTRATIVE PLAYER MOCKUP -->
+
+    <div class="player-mockup reveal">
+
+      
+<div class="player-top">
+  <span>VibeSA PLAYER</span>
+  <span>● READY</span>
+</div>
+
+<div class="album-art">
+  <strong>VSA.</strong>
+  <small>FEEL THE SOUND</small>
+</div>
+
+<div class="track-name">Your Next Favourite</div>
+<div class="track-artist">The VibeSA Experience</div>
+
+<div class="progress">
+  <span></span>
+</div>
+
+<div class="track-times">
+  <span>01:24</span>
+  <span>03:45</span>
+</div>
+
+<div class="player-controls">
+  <span>◀◀</span>
+  <div class="play-button">▶</div>
+  <span>▶▶</span>
+</div>
+
+<div class="wave">
+  <span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SOUTH AFRICAN IDENTITY -->
+
+<section class="sa-section">
 
   <div class="reveal">
 
     <small style="color:var(--green);letter-spacing:3px;font-weight:800">
-      LET'S CREATE SOMETHING
+      MADE WITH A VISION
     </small>
 
     <h2>
-      Have an idea?<br>
-      <span>Let's build it.</span>
+      One Country.<br>
+      <span>Many Sounds.</span>
     </h2>
 
     <p>
-      Whether you're starting a business, launching a brand
-      or exploring a digital product, let's discuss your idea.
+      From Amapiano to Lekompo, from local independent
+      artists to new musical discoveries.
+
+      VibeSA is being built with a vision to celebrate
+      music and create new opportunities for South African sounds.
     </p>
 
-    <!-- REPLACE WITH YOUR REAL WHATSAPP NUMBER -->
-
-    <a
-      class="btn btn-primary"
-      href="https://wa.me/27 71 696 7874?text=Hello%20BM%20Developers%2C%20I%20have%20a%20project%20idea."
-      target="_blank"
-      rel="noopener noreferrer">
-      Contact BM Developers ↗
-    </a>
-
-    <div class="contact-details">
-      Independent Digital Development Studio · South Africa
+    <div class="wave">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
     </div>
 
   </div>
 
-</section
- 
+</section>
+
+<!-- COUNTDOWN -->
+
+<section class="countdown-section" id="launch">
+
+  <div class="countdown-inner reveal">
+
+    <div class="countdown-label">
+      THE WAIT IS ALMOST OVER
+    </div>
+
+    <h2>
+      THE NEXT ERA<br>
+      <span>STARTS SOON.</span>
+    </h2>
+
+    <p class="countdown-subtitle">
+      The VibeSA launch countdown has begun.
+    </p>
+
+    <div class="countdown" id="countdown">
+
+      <div class="time-box">
+        <div class="time-number" id="days">000</div>
+        <div class="time-label">DAYS</div>
+      </div>
+
+      <div class="time-box">
+        <div class="time-number" id="hours">00</div>
+        <div class="time-label">HOURS</div>
+      </div>
+
+      <div class="time-box">
+        <div class="time-number" id="minutes">00</div>
+        <div class="time-label">MINUTES</div>
+      </div>
+
+      <div class="time-box">
+        <div class="time-number" id="seconds">00</div>
+        <div class="time-label">SECONDS</div>
+      </div>
+
+    </div>
+
+    <div class="launch-date">
+      OFFICIAL TARGET: <span>02 FEBRUARY 2027 · 17:00 SAST</span>
+    </div>
+
+    <div class="countdown-message" id="countdownMessage">
+      GET READY FOR THE VIBE.
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FINAL CTA -->
+
+<section class="final-cta">
+
+  <div class="reveal">
+
+    <small style="color:var(--green);letter-spacing:3px;font-weight:800">
+      YOUR SOUND IS WAITING
+    </small>
+
+    <h2>
+      Don't just hear it.<br>
+      <span>Feel the Vibe.</span>
+    </h2>
+
+    <p>
+      VibeSA. A new music experience.
+      Coming February 2027.
+    </p>
+
+    <a href="#launch" class="btn btn-primary">
+      Watch the Countdown ↗
+    </a>
+
+  </div>
+
+</section>
+
 <!-- FOOTER -->
 
 <footer>
   <div>
-    © 2026 <span>BM Developers</span>. All Rights Reserved.
+    © 2026 <span>VibeSA</span>. All Rights Reserved.
   </div>
 
   <div>
-    Designed with creativity and code.
+    THE SOUND OF SOUTH AFRICA 🇿🇦
   </div>
 </footer>
 
 <script>
 
-/* MOBILE NAVIGATION */
+/* MOBILE MENU */
 
 function toggleMenu() {
   document.getElementById("navLinks").classList.toggle("open");
@@ -1081,131 +1285,96 @@ function closeMenu() {
   document.getElementById("navLinks").classList.remove("open");
 }
 
+/* LAUNCH COUNTDOWN */
+
+const launchDate = new Date(
+  "2027-02-02T17:00:00+02:00"
+).getTime();
+
+const daysElement = document.getElementById("days");
+const hoursElement = document.getElementById("hours");
+const minutesElement = document.getElementById("minutes");
+const secondsElement = document.getElementById("seconds");
+const messageElement = document.getElementById("countdownMessage");
+
+function updateCountdown() {
+
+  const now = Date.now();
+  const difference = launchDate - now;
+
+  if (difference <= 0) {
+
+    daysElement.textContent = "000";
+    hoursElement.textContent = "00";
+    minutesElement.textContent = "00";
+    secondsElement.textContent = "00";
+
+    messageElement.textContent =
+      "THE VIBESA LAUNCH TIME HAS ARRIVED!";
+
+    return;
+  }
+
+  const days = Math.floor(
+    difference / (1000 * 60 * 60 * 24)
+  );
+
+  const hours = Math.floor(
+    (difference / (1000 * 60 * 60)) % 24
+  );
+
+  const minutes = Math.floor(
+    (difference / (1000 * 60)) % 60
+  );
+
+  const seconds = Math.floor(
+    (difference / 1000) % 60
+  );
+
+  daysElement.textContent = String(days).padStart(3,"0");
+  hoursElement.textContent = String(hours).padStart(2,"0");
+  minutesElement.textContent = String(minutes).padStart(2,"0");
+  secondsElement.textContent = String(seconds).padStart(2,"0");
+}
+
+updateCountdown();
+setInterval(updateCountdown,1000);
+
 /* SCROLL REVEAL */
 
-const revealObserver = new IntersectionObserver(function(entries) {
-  entries.forEach(function(entry) {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, {
-  threshold: 0.12
-});
+if ("IntersectionObserver" in window) {
 
-document.querySelectorAll(".reveal").forEach(function(element) {
-  revealObserver.observe(element);
-});
+  const observer = new IntersectionObserver(function(entries) {
 
-/* 3D SERVICE CARD MOVEMENT */
+    entries.forEach(function(entry) {
 
-document.querySelectorAll(".service-card").forEach(function(card) {
+      if (entry.isIntersecting) {
 
-  card.addEventListener("mousemove", function(event) {
+        entry.target.classList.add("visible");
 
-    if (window.innerWidth < 850) return;
-
-    const rect = card.getBoundingClientRect();
-
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
-
-    const rotateY = (x / rect.width - 0.5) * 12;
-    const rotateX = (0.5 - y / rect.height) * 12;
-
-    card.style.transform =
-      "perspective(800px) rotateX(" + rotateX +
-      "deg) rotateY(" + rotateY + "deg) translateY(-5px)";
-  });
-
-  card.addEventListener("mouseleave", function() {
-    card.style.transform = "";
-  });
-
-});
-
-/* ANIMATED PARTICLE BACKGROUND */
-
-(function() {
-
-  const canvas = document.getElementById("particles");
-  const ctx = canvas.getContext("2d");
-
-  let particles = [];
-  let width;
-  let height;
-
-  function resize() {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-    createParticles();
-  }
-
-  function createParticles() {
-
-    particles = [];
-
-    const count = Math.min(
-      55,
-      Math.floor((width * height) / 18000)
-    );
-
-    for (let i = 0; i < count; i++) {
-
-      particles.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        radius: Math.random() * 1.8 + .4,
-        speed: Math.random() * .35 + .1,
-        opacity: Math.random() * .45 + .1
-      });
-
-    }
-  }
-
-  function animate() {
-
-    ctx.clearRect(0, 0, width, height);
-
-    particles.forEach(function(particle) {
-
-      particle.y -= particle.speed;
-
-      if (particle.y < 0) {
-        particle.y = height;
-        particle.x = Math.random() * width;
+        observer.unobserve(entry.target);
       }
-
-      ctx.beginPath();
-
-      ctx.arc(
-        particle.x,
-        particle.y,
-        particle.radius,
-        0,
-        Math.PI * 2
-      );
-
-      ctx.fillStyle =
-        "rgba(53,230,154," + particle.opacity + ")";
-
-      ctx.fill();
 
     });
 
-    requestAnimationFrame(animate);
-  }
+  }, {
+    threshold: 0.12
+  });
 
-  window.addEventListener("resize", resize);
+  document.querySelectorAll(".reveal").forEach(function(element) {
+    observer.observe(element);
+  });
 
-  resize();
-  animate();
+} else {
 
-})();
+  document.querySelectorAll(".reveal").forEach(function(element) {
+    element.classList.add("visible");
+  });
+
+}
 
 </script>
 
 </body>
- </html>
- 
+      </html>
+          
